@@ -1,6 +1,6 @@
 from django.db import models
 
-class Inventory(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     quantity = models.IntegerField(default=0)
