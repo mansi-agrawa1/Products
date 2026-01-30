@@ -144,6 +144,27 @@ Fields included:
 
 ---
 
+## Bonus Features 
+
+### Filtering
+
+Filter items by fields like quantity or price:
+
+```
+GET /api/items/?quantity=10
+GET /api/items/?min_price=50000&max_price=80000
+```
+
+### Pagination
+
+Large datasets are paginated automatically.
+
+```
+GET /api/items/?page=2
+```
+
+---
+
 ## Project Structure
 
 ```
@@ -161,6 +182,23 @@ inventory/
 │
 └── manage.py
 ```
+
+---
+
+## API Testing (Postman)
+
+A Postman collection is included in the repository under /postman.
+
+Steps:
+1. Open Postman
+2. Click Import
+3. Select Inventory_API.postman_collection.json
+4. Set base URL as http://127.0.0.1:8000
+5. Test all endpoints
+
+Alternatively, you can access the Postman collection here:
+
+https://web.postman.co/workspace/My-Workspace~b02b777d-06f2-491c-8c15-4864349c23dd/collection/43034121-2eb66c09-0b81-4dfc-b482-79c6b7b163f6?action=share&source=copy-link&creator=43034121
 
 ---
 
