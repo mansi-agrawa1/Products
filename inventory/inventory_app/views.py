@@ -14,9 +14,12 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         qs = Product.objects.all()
+        quantity = self.request.query_params.get('quantity')
         min_price = self.request.query_params.get('min_price')
         max_price = self.request.query_params.get('max_price')
 
+        if quantity:
+            qs = qs.filter(quantity=quantity)
         if min_price:
             qs = qs.filter(price__gte=min_price)
         if max_price:
